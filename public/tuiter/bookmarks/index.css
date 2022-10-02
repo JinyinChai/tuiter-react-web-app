@@ -1,0 +1,171 @@
+
+body {
+    background: black;
+    margin: 4px 0 0 0;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+.wd-border-width-thin {
+    border-width: thin;
+}
+
+.wd-top-border{
+    margin-top: 12px;
+}
+
+.wd-left-border{
+    margin-left: 16px;
+}
+
+.wd-right-border{
+    margin-right: 12px;
+}
+
+.wd-bottom-border{
+    margin-bottom: 12px;
+}
+
+.wd-sectionA{
+    border-top-style: solid;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-color: rgb(47, 51, 54);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.wd-secA-title{
+    font-size: 20px;
+    color: white;
+}
+
+.wd-secA-user{
+    font-size: 13px;
+    color: darkgrey;
+}
+
+.wd-secA-width1{
+    width: 95%;
+}
+
+.wd-secA-width2{
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.wd-secA-ellipsis-width{
+    width: 5%;
+}
+
+.wd-secA-ellipsis{
+    font-size: 20px;
+    color: dodgerblue;
+}
+
+
+.wd-avatar{
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+}
+
+.wd-sectionBCD{
+    border-top-style: solid;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-color: rgb(47, 51, 54);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.wd-secC-author{
+    font-size: 15px;
+    color: white;
+}
+
+.wd-secC-handle{
+    font-size: 15px;
+    color: darkgrey;
+}
+
+.wd-secC-ellipsis{
+    font-size: 15px;
+    color: darkgrey;
+}
+
+
+.wd-secD-text{
+    font-size: 15px;
+    color: white;
+    width: 506px;
+}
+
+.wd-secE-image{
+    width: 504px;
+    height: 264px;
+    border-radius: 10px 10px 0 0;
+    border: solid;
+    border-color: rgb(47, 51, 54);
+}
+
+.wd-secF-title{
+    font-size: 15px;
+    color: white;
+}
+
+.wd-secF {
+    padding: 0px 12px 12px 12px;
+    width: 504px;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-color: rgb(47, 51, 54);
+    border-radius: 0 0 10px 10px;
+}
+
+.wd-secF-text{
+    font-size: 15px;
+    color: lightgray;
+}
+
+.wd-secG{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+
+    justify-content: space-between;
+    max-width: 504px;
+}
+
+.wd-secG-icon{
+    display: flex;
+    flex-direction: row;
+}
+
+.wd-secG-icons{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 478px;
+}
+
+.wd-secG-icon1{
+    color: lightgray;
+}
+
+.wd-secG-icon2{
+    color: red;
+}

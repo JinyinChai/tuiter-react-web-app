@@ -1,0 +1,234 @@
+
+body {
+    background: black;
+    margin: 4px 0 0 0;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+.wd-border-width-thin {
+    border-width: thin;
+}
+
+.wd-left-border{
+    margin-left: 16px;
+}
+
+.wd-right-border{
+    margin-right: 12px;
+}
+
+.wd-bottom-border{
+    margin-bottom: 12px;
+}
+
+
+.wd-sectionA {
+    border-left-style: solid;
+    border-right-style: solid;
+    border-color: rgb(47, 51, 54);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.wd-searchBox-container {
+    width:85%;
+}
+
+.wd-searchBox {
+    border-radius: 18px;
+    background-color: darkgray;
+    padding: 7px 10px;
+    text-indent:30px;
+    width: 96%;
+    border-color: darkgray;
+}
+
+::placeholder {
+    color: white;
+}
+
+.wd-gear-container {
+    width: 10%;
+    margin-right: 12px;
+    text-align: right
+}
+
+.wd-gear {
+    width: 40px;
+        height: 41px;
+        margin-right: 12px;
+        padding: 6px;
+        float: right;
+    color: blue;
+    font-size: 25px;
+}
+
+.wd-sectionB {
+    border-left-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-color: rgb(47, 51, 54);
+}
+.wd-sectionB-horLine {
+    border-left-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-color: rgb(47, 51, 54);
+    background-color: darkgray;
+    padding: 4px;
+}
+
+.wd-navbar {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.wd-navs {
+    width: 15%;
+    list-style: none;
+    display: inline-block;
+    font-size: 15px;
+    padding: 16px;
+}
+
+.wd-navs a {
+    position:relative;
+    text-decoration: none;
+    color: rgb(110, 118, 125);
+    cursor: pointer;
+    transition:all 200ms ease-in;
+}
+
+.wd-navs a:hover:after {
+    content: "";
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    bottom: -20px;
+    border: 2px solid rgb(29,161,242);
+    background-color: rgb(29,161,242);
+}
+
+a:hover,
+a:active {
+    color: rgb(29,161,242);
+}
+
+.wd-sectionC {
+    border-left-style: solid;
+    border-right-style: solid;
+    border-color: rgb(47, 51, 54);
+    padding: 2px 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.wd-sectionC-bottom-border{
+    border-bottom-style: solid;
+    border-color: rgb(47, 51, 54);
+}
+
+.wd-secC-topic {
+    font-size: 13px;
+    color: rgb(110, 118, 125);
+}
+
+.wd-line-height {
+    margin: 4px 0px;
+}
+
+.wd-secC-topic {
+    font-size: 13px;
+    color: rgb(110, 118, 125);
+}
+
+.wd-secC-title {
+    font-size: 18px;
+    color: white;
+}
+
+.wd-secC-nTuits {
+    font-size: 13px;
+    color: rgb(110, 118, 125);
+}
+
+.wd-100-width{
+    width: 100%;
+}
+
+.wd-97-width {
+    width: 97%;
+}
+
+.wd-3-width {
+    width: 3%;
+}
+
+.wd-ellipsis1{
+    line-height: 0px;
+    font-size: 18px;
+    color: white;
+}
+
+.wd-ellipsis2{
+    line-height: 0px;
+    font-size: 18px;
+    color: rgb(110, 118, 125);
+}
+
+.wd-secD-author {
+    font-size: 15px;
+    color: white;
+}
+
+.wd-secD-title{
+    font-size: 15px;
+    color: white;
+}
+
+.wd-sectionDE {
+    border-left-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-color: rgb(47, 51, 54);
+    padding: 2px 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.wd-secD-image {
+    width: 100px;
+    height: 100px;
+    float: right;
+    margin-right: 16px;
+    border-radius: 10%
+}
+
+.wd-secD-words {
+    width: 80%;
+}
+
+.wd-secD-images {
+    padding: 10px 0px;
+    width: 20%;
+}
+
+.wd-secE-topic {
+    font-size: 15px;
+    color: rgb(110, 118, 125);
+}
+
