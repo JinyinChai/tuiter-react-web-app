@@ -13,7 +13,7 @@ import PostSummaryList from "../PostSummaryList";
   <a href="../../index.html">Back</a>
 </div>
    <!--<h3>Navigation Sidebar</h3>-->
-    ${NavigationSidebar()}
+    ${NavigationSidebar('home')}
    </div>
    <div class="col-10 col-lg-7 col-xl-6 mt-4 text-white ps-0">
 <!--    <h3>ExploreComponent</h3>-->
