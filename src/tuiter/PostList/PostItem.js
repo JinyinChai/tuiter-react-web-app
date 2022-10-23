@@ -34,7 +34,9 @@ const PostItem = (
                     <p class="m-0 fs-6"><span class="fw-bold">{post.name}</span> <i class="bi-check-circle-fill"></i> <span class="text-secondary">{post.handle}<span> - </span>{post.time}</span></p>
                     {!post.title.includes('#') ?
 
-                        <p class="m-0 fs-6 ">{replaceHTML(post.quote)}</p>:
+                        <p className="m-0 fs-6 ">{post.quote.split('#H')[0]}
+                            <span class="text-primary">{post.highlight}</span>
+                            {post.quote.split('#H')[1]}</p>:
                         <p class="m-0 fs-6">{post.quote}</p>
                     }
             </div>
@@ -79,13 +81,5 @@ const PostItem = (
     );
 };
 export default PostItem;
-
-function replaceHTML(quote){
-    var temp;
-    quote = quote.replace('#S','<strong style="color: deepskyblue">');
-    quote = quote.replace('#E', '</strong>');
-    temp = JSON.parse(JSON.stringify(quote));
-    return temp;
-}
 
 
