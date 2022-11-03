@@ -1,20 +1,21 @@
 import React from "react";
 import {useSelector} from "react-redux";
 import ProfileComponent from "./ProfileComponent";
+import TuitList from "../tuits/tuitsList";
 
 const ProfileList = () => {
-    const myProfile = useSelector((state) => state.myProfile);
-
+    const myProfileArray = useSelector((state) => state.myProfile);
 
     return(
         <>
             {
-                myProfile.map(myProfile => {
+                myProfileArray.map(myProfile => {
                     return(
                         <ProfileComponent myProfile={myProfile} key={myProfile._id}/>
                     )
                 })
             }
+            <TuitList/>
         </>
     )
 }

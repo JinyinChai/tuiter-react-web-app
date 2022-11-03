@@ -1,83 +1,78 @@
 import React from "react";
 import {Link} from "react-router-dom";
+import {useSelector} from "react-redux";
 
-const ProfileComponent = ({myProfile}) => {
+const ProfileComponent = (
+    {
+        myProfile = {
+            _id: '1234',
+            firstName: 'Jose',
+            lastName: 'Annunziato',
+            handle: '@jannunzi',
+            profilePicture: '../images/husky_img.jpeg',
+            bannerPicture: require('../images/banner.png'),
+            bio: 'Faculty, Software Engineer, AI, Space, and renewable enthusiast.Retuits and likes are not endorsements.',
+            location: 'Boston, MA',
+            dataOfBirth: '7/7/1968',
+            website: 'youtube.com/webdevtv',
+            dateJoined: '4/2009',
+            followingCount: 340,
+            followersCount: 223,
+            tweets: 11231
+        }
+    }
+) => {
     return(
         <>
-            <div className="row">
+            <div className="row mb-5">
                 <div className="row col-12">
                     <div className="col-2"><i className="bi-arrow-left text-white"></i></div>
                     <div className="col-10 ps-0">
-                        <h5 className="text-white fw-bold mb-0">{myProfile.firstName}</h5>
+                        <h5 className="text-white fw-bold mb-0">{myProfile.firstName} {myProfile.lastName}</h5>
                         <span className="mb-0">{myProfile.tweets} Tweets</span>
                     </div>
                 </div>
 
-                <img width="100%" src={myProfile.bannerPicture}/>
+                <img width="100%" height="200px" src={myProfile.bannerPicture}/>
+                <div className="row col-12 pe-0">
+                    <div className="col-6">
+                        <img className="img-fluid wd-tweet-profile-position ms-2" src={myProfile.profilePicture}/>
+                    </div>
+                    <div className="col-6">
+                        <Link to="/tuiter/profile/editProfile">
+                            <button className="bg-black rounded-pill mt-3 border-1 border-white float-end">Edit Profile</button>
+                        </Link>
+                    </div>
+                    <div className="mt-1">
+                        <h5 className="ms-2 fw-bold mt-1">{myProfile.firstName} {myProfile.lastName}</h5>
+                    </div>
+                    <div>
+                        <span className="ms-2">{myProfile.handle}</span>
+                    </div>
+                    <div className="ms-2">
+                        <div className="mt-2 text-white">
+                            <span>{myProfile.bio}</span>
+                        </div>
+                        <div className="mt-1">
+                            <i className="bi-geo-alt-fill"></i>
+                            <span className="ms-1">{myProfile.location}</span>
+                            <i className="bi-link ms-3"></i>
+                            <span className="ms-1 text-primary text-decoration-underline">{myProfile.website}</span>
+                            <i className="bi-calendar-fill ms-3"></i>
+                            <span className="ms-1">{myProfile.dataOfBirth}</span>
+                            <i className="bi-calendar-fill ms-3"></i>
+                            <span className="ms-1">{myProfile.dateJoined}</span>
+                        </div>
+                        <div className="mt-1">
+                            <span><strong className="text-white">{myProfile.followingCount}</strong> Following</span>
+                            <span className="ms-3"><strong className="text-white">{myProfile.followersCount}</strong> Followers</span>
+                        </div>
+                    </div>
+                </div>
             </div>
+
         </>
 
-        // <>
-        //     <div className="row">
-        //         <div className="row col-12">
-        //             <div className="col-2 wd-arrow-back mt-3"><i className="fa-solid fa-arrow-left fa-xl"></i></div>
-        //             <div className="col-10 ps-0">
-        //                 <h5 className="mb-0 fw-bold">{myProfile.firstName}</h5>
-        //                 <p className="mb-0 fg-color-726D6D wd-font-size-15px">{myProfile.tweets.toLocaleString()} Tweets</p>
-        //             </div>
-        //         </div>
-        //
-        //         <div className="row pe-0 col-12">
-        //
-        //             <img className="pe-0 wd-tweet-banner-position" src={myProfile.bannerPicture} alt={"banner"}/>
-        //
-        //             <div className=" row col-12">
-        //                 <div className="col-6">
-        //                     <img className="wd-tweet-profile-position wd-tweet-profile-responsive d-none d-sm-none d-md-inline d-lg-inline-inline d-xl-inline-flex d-xl-inline d-xxl-inline" src={myProfile.profilePicture} alt="profile"/>
-        //                 </div>
-        //
-        //                 <div className="col-12">
-        //                     <button className="btn btn-primary float-right wd-right-button-editprofile">
-        //                         <Link to="/tuiter/profile/editprofile" className="wd-text-decor-none">
-        //                             <span className="wd-small-white-fontsize fw-bold">Edit profile</span>
-        //                         </Link>
-        //                     </button>
-        //                 </div>
-        //             </div>
-        //
-        //         </div>
-        //
-        //         <div className="row mt-4">
-        //             <h5 className="mb-0 ms-4 fw-bold">{myProfile.firstName}</h5>
-        //             <h6 className="mb-0 ms-4 fg-color-726D6D">@{myProfile.handle}</h6>
-        //             <h6 className="mb-0 mt-3 ms-4 wd-paragraph-justify ">{myProfile.bio}</h6>
-        //         </div>
-        //         <div className="row mt-3">
-        //             <div className="row col-4">
-        //                 <p className="mb-0 ms-4 col-1 fg-color-726D6D"><i className="fa-solid fa-location-dot fa-lg"></i></p>
-        //                 <p className="mb-0 ms-0 col-8 fg-color-726D6D d-none d-sm-none d-md-none d-lg-none d-xl-inline d-xl-inline d-xxl-inline">{myProfile.location}</p>
-        //             </div>
-        //             <div className="row col-3">
-        //                 <p className="mb-0 ms-3 ps-0 col-1 fg-color-726D6D d-none d-sm-none d-md-none d-lg-none d-xl-inline d-xl-inline d-xxl-inline"><i className="fa-solid fa-cake-candles fa-lg"></i></p>
-        //                 <p className="mb-0 ms-0 col-8 fg-color-726D6D d-none d-sm-none d-md-none d-lg-none d-xl-inline d-xl-inline d-xxl-inline">{myProfile.dataOfBirth}</p>
-        //             </div>
-        //             <div className="row col-5">
-        //                 <p className="mb-0 ms-5 ps-0 col-1 fg-color-726D6D d-none d-sm-none d-md-none d-lg-none d-xl-inline d-xl-inline d-xxl-inline"><i className="fa-regular fa-calendar fa-lg"></i></p>
-        //                 <p className="mb-0 ms-0 col-8 fg-color-726D6D d-none d-sm-none d-md-none d-lg-none d-xl-inline d-xl-inline d-xxl-inline">{myProfile.dateJoined}</p>
-        //             </div>
-        //         </div>
-        //         <div className="row mt-3">
-        //             <div className="row col-5">
-        //                 <p className="ms-4 mb-0 col-1 fw-bold">{myProfile.followingCount}</p>
-        //                 <p className="ms-3 ps-2 mb-0 col-8 fg-color-726D6D nav-item d-none d-sm-none d-md-none d-lg-none d-xl-inline d-xxl-inline">Following</p>
-        //             </div>
-        //             <div className="row col-3">
-        //                 <p className="ms-0 ps-0 mb-0 col-1 fw-bold d-none d-sm-none d-md-none d-lg-inline d-xl-inline d-xl-inline d-xxl-inline">{myProfile.followersCount}</p>
-        //                 <p className="ms-3 ps-2 mb-0 col-8 fg-color-726D6D d-none d-sm-none d-md-none d-lg-none d-xl-inline d-xl-inline d-xxl-inline">Followers</p>
-        //             </div>
-        //         </div>
-        //     </div>
-        // </>
     )
 }
 
