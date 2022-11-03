@@ -284,6 +284,12 @@ const init = () => {
     hideBtn.click(hideHandler);
     showBtn.click(showHandler);
 
+
+    const a = {b: 21, c: 32};
+    const d = {...a, c: 43};
+    const e = [d, a];
+    const [f, j] = e;
+    console.log(f.c)
 }
 // eslint-disable-next-line no-undef
 $(init);

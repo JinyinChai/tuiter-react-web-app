@@ -1,4 +1,6 @@
 import React from "react";
+import {useSelector} from "react-redux";
+
 const PostSummaryItem = (
     {
         post = {
@@ -10,6 +12,7 @@ const PostSummaryItem = (
         }
     }
 ) => {
+    const postsArray = useSelector(state => state.posts)
     return(
         <li className="list-group-item">
             <div className="row">

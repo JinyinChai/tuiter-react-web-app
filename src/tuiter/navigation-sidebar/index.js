@@ -27,15 +27,15 @@ const NavigationSidebar = () => {
             <Link to="#" className={`list-group-item ${active === 'bookmarks' ? 'active' : ''}`}>
                 <i className="bi-bookmark-fill"> <span
                     className="d-none d-sm-none d-md-none d-lg-none d-xl-inline d-xxl-inline">Bookmarks</span></i></Link>
-            <a className={`list-group-item ${active === 'list' ? 'active' : ''}`} href="#">
+            <Link className={`list-group-item ${active === 'list' ? 'active' : ''}`} href="#">
                 <i className="bi-list"> <span
-                    className="d-none d-sm-none d-md-none d-lg-none d-xl-inline d-xxl-inline">Lists</span></i></a>
-            <a className={`list-group-item ${active === 'profile' ? 'active' : ''}`} href="#">
+                    className="d-none d-sm-none d-md-none d-lg-none d-xl-inline d-xxl-inline">Lists</span></i></Link>
+            <Link to="/tuiter/profile" className={`list-group-item ${active === 'profile' ? 'active' : ''}`}>
                 <i className="bi-people-fill"> <span
-                    className="d-none d-sm-none d-md-none d-lg-none d-xl-inline d-xxl-inline">Profile</span></i></a>
-            <a className={`list-group-item ${active === 'more' ? 'active' : ''}`} href="#">
+                    className="d-none d-sm-none d-md-none d-lg-none d-xl-inline d-xxl-inline">Profile</span></i></Link>
+            <Link className={`list-group-item ${active === 'more' ? 'active' : ''}`} href="#">
                 <i className="bi-circle-fill"> <span
-                    className="d-none d-sm-none d-md-none d-lg-none d-xl-inline d-xxl-inline">More</span></i></a>
+                    className="d-none d-sm-none d-md-none d-lg-none d-xl-inline d-xxl-inline">More</span></i></Link>
 
         </div>
 
