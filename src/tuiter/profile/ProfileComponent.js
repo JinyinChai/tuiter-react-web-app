@@ -1,6 +1,7 @@
-import React from "react";
+import React, {useState} from "react";
 import {Link} from "react-router-dom";
-import {useSelector} from "react-redux";
+import {useSelector, useDispatch} from "react-redux";
+import {useNavigate } from "react-router-dom";
 
 const ProfileComponent = (
     {
@@ -39,7 +40,7 @@ const ProfileComponent = (
                         <img className="img-fluid wd-tweet-profile-position ms-2" src={myProfile.profilePicture}/>
                     </div>
                     <div className="col-6">
-                        <Link to="/tuiter/profile/editProfile">
+                        <Link to="/tuiter/editProfile">
                             <button className="bg-black rounded-pill mt-3 border-1 border-white float-end">Edit Profile</button>
                         </Link>
                     </div>
@@ -59,9 +60,9 @@ const ProfileComponent = (
                             <i className="bi-link ms-3"></i>
                             <span className="ms-1 text-primary text-decoration-underline">{myProfile.website}</span>
                             <i className="bi-calendar-fill ms-3"></i>
-                            <span className="ms-1">{myProfile.dataOfBirth}</span>
+                            <span className="ms-1">Born {myProfile.dataOfBirth}</span>
                             <i className="bi-calendar-fill ms-3"></i>
-                            <span className="ms-1">{myProfile.dateJoined}</span>
+                            <span className="ms-1">Joined {myProfile.dateJoined}</span>
                         </div>
                         <div className="mt-1">
                             <span><strong className="text-white">{myProfile.followingCount}</strong> Following</span>

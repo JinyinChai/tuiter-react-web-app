@@ -1,6 +1,6 @@
 import React from "react";
 import EditProfile from "./EditProfile";
-import myProfile from "../data/profile.json"
+import myProfileArray from "../data/profile.json"
 import {useSelector} from "react-redux";
 
 const EditProfileComponent = () => {

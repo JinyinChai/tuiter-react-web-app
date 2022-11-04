@@ -2,6 +2,8 @@ import React from "react";
 import ExploreComponent from "./explore";
 import NavigationSidebar from "./navigation-sidebar";
 import WhoToFollowList from "./who-to-follow-list";
+import ProfileList from "./profile";
+import EditProfileComponent from "./editProfile";
 import {Routes, Route} from "react-router";
 import HomeComponent from "./home";
 import whoReducer
@@ -11,11 +13,7 @@ import postsReducer from "./reducers/explore-tuits-reducer";
 import profileReducer from "./reducers/profile-reducer";
 import { configureStore } from '@reduxjs/toolkit';
 import {Provider} from "react-redux";
-import Profile from "./profile";
-import ProfileComponent from "./profile/ProfileComponent";
-import ProfileList from "./profile";
-import EditProfile from "./editProfile";
-import EditProfileComponent from "./editProfile";
+
 const store = configureStore({
     reducer: {who: whoReducer, tuits: tuitsReducer, posts:postsReducer, myProfile:profileReducer}});
 
@@ -34,7 +32,7 @@ function Tuiter() {
                     <Route path="home"    element={<HomeComponent/>}/>
                     <Route path="explore" element={<ExploreComponent/>}/>
                     <Route path="profile" element={<ProfileList/>}/>
-                    <Route path="profile/editProfile" element={<EditProfileComponent/>}/>
+                    <Route path="editProfile" element={<EditProfileComponent/>}/>
                 </Routes>
             </div>
             <div className="d-sm-none d-md-none d-lg-block col-lg-4 col-xl-4">
