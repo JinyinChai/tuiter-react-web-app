@@ -64,8 +64,6 @@ const tuitsSlice = createSlice({
                 }
             }
 
-
-
     },
     reducers: {
         createTuit(state, action) {
@@ -81,21 +79,10 @@ const tuitsSlice = createSlice({
                     tuit._id === action.payload);
             state.splice(index, 1);
         },
-        likeTuit(state, action) {
-            state.map(tuits => {
-                if (tuits._id === action.payload) {
-                    if (tuits.liked === true) {
-                        tuits.liked = false;
-                        tuits.heart--;
-                    } else {
-                        tuits.liked = true;
-                        tuits.heart++;
-                    }
-                    return tuits;
-                } else {
-                    return tuits;
-                }
-            });
+        updateTuit(state, action) {
+            return state.map(
+                tuit => tuit._id === action.tuit._id ? action.tuit : tuit
+            );
         }
 
     }
@@ -103,5 +90,5 @@ const tuitsSlice = createSlice({
 
 });
 
-export const {createTuit, deleteTuit, likeTuit} = tuitsSlice.actions;
+// export const {createTuit, deleteTuit, updateTuit} = tuitsSlice.actions;
 export default tuitsSlice.reducer;
