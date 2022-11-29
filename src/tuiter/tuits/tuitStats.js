@@ -24,9 +24,9 @@ const TuitStat = ({tuits}) => {
                 <div className="row col-3 ms-3">
                     <p className="col-1 fg-color-white"><i onClick={() => dispatch(updateTuitThunk({
                         ...tuits,
-                        heart: tuits.heart + 1
+                        likes: tuits.likes + 1
                     }))} className="bi-hand-thumbs-up-fill"></i></p>
-                    <p className="col-1 ms-0 text-white">{tuits.heart}</p>
+                    <p className="col-1 ms-0 text-white">{tuits.likes}</p>
                 </div>
 
                 <div className="row col-3 ms-3">
